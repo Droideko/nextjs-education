@@ -1,8 +1,13 @@
 import { AppProps } from 'next/dist/next-server/lib/router/router';
-import '../styles/globals.css';
+import { GlobalStyle } from '../styles/globalStyle';
 
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Component {...pageProps} />;
+      <GlobalStyle />
+    </>
+  );
 };
 
 export default MyApp;
