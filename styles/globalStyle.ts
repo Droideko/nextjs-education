@@ -1,15 +1,19 @@
 import { createGlobalStyle } from 'styled-components';
 
-const BLACK_COLOR = '#00000';
+const BLACK = '#00000';
+const WHITE = '#ffffff';
 
-const PRIMARY_COLOR = '#2f665c';
-const SECONDARY_COLOR = '#eff6f2';
+const PRIMARY_LIGHT = '#2f665c';
+const PRIMARY_DARK = '#000'; // TODO
+
+const SECONDARY_LIGHT = '#eff6f2';
+const SECONDARY_DARK = '#000'; // TODO
 
 export const GlobalStyle = createGlobalStyle`
   html, body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, sans-serif;
+    font-family: 'Open Sans', sans-serif;
   }
 
   * {
@@ -22,11 +26,19 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   :root {
-    --btn-white-text: ${BLACK_COLOR};
-    --primary-color: ${PRIMARY_COLOR};
-    --secondary-color: ${SECONDARY_COLOR};
+    --btn-white-text: ${BLACK};
+    --primary-color: ${PRIMARY_LIGHT};
+    --secondary-color: ${SECONDARY_LIGHT};
 
     background-color: var(--btn-white-text);
-    color: white;
+    color: var(--primary-color);
+
+    .light {
+
+    }
+
+    .dark {
+      
+    }
   }
 `;
