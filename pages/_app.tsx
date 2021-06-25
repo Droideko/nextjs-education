@@ -4,8 +4,9 @@ import { GlobalStyle } from '../styles/globalStyle';
 const MyApp = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
       <GlobalStyle />
+      <p>test</p>
     </>
   );
 };
